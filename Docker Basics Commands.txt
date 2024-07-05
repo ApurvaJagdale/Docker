@@ -1,0 +1,75 @@
+DOCKER BASICS
+
+##Install Docker##
+use "yum install docker -y"
+
+##Start Docker##
+use "systemctl start docker"
+
+## Enable Docker##
+use "systemctl enable docker"
+
+The "start" command in "systemctl" initiates a service immediately, while "enable" configures a service to start automatically at boot.
+
+##To check Version##
+use "docker --version" command or "docker -v".
+
+##To see the Docker System information"
+use "docker info" command.
+
+##To List the docker Images ##
+"docker images" command we use.
+
+## Then pull an Image from docker Hub ##
+"docker pull image_name:tag"
+
+##How to create the Container.
+"docker create --name my-container image_name:tag".
+
+##How to start container##
+"docker start my-container";
+
+##Execute Command in Container##
+docker exec my-container ls /
+
+
+
+##Remove Docker Image ##
+docker rmi image_name:tag
+
+## How to create the Container ##
+docker create --name my-container ubuntu:latest
+
+
+##List the Running Container ##
+docker ps
+
+##List all Container including stop ##
+docker ps -a
+
+##Run The Conatainer in Detached Mode #
+docker run -d image_name:tag
+
+##Run an Interactive container ##
+docker run -it image_name:tag
+
+##give name to the container ##
+docker run -it --name <new_name image> image_name:tag 
+
+##Start Container ##
+docker start container_id/name
+
+##Stop running container ##
+docker stop container_id/name
+
+##Remove the Container ##
+docker rm container_id/name
+
+##Execute the command inside the running Container ##
+docker exec -it container_id_/name command
+
+##show logs of a containers ##
+docker logs container_id/name
+
+
+
